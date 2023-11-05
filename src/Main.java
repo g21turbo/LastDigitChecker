@@ -10,12 +10,18 @@ public class Main {
 
     public static boolean hasSameLastDigit(int num1, int num2, int num3) {
 
-        if (num1 < 10 || num1 > 1000 ||
-            num2 < 10 || num2 > 1000 ||
-            num3 < 10 || num3 > 1000) {
+
+        // Input validation
+        boolean num1Valid = num1 >= 10 && num1 <= 1000;
+        boolean num2Valid = num2 >= 10 && num2 <= 1000;
+        boolean num3Valid = num3 >= 10 && num3 <= 1000;
+
+        if (!num1Valid || !num2Valid || !num3Valid) {
             return false;
         }
+
         return true;
+
     }
 
 
